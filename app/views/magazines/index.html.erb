@@ -1,0 +1,29 @@
+<%- model_class = Magazine -%>
+ <div class="container" >
+   <div id="magazine_fields_value">
+    <%= render 'magazines/new' %>
+   </div>
+ </div>
+<div class="container">
+    <%= submit_tag  "new", :class => 'btn btn-primary' , :id=> "new_btn" %>
+</div>
+
+
+<script>
+
+  $('document').ready(function(){
+      $('#magazine_fields_value').hide();
+   });
+
+  $('#new_btn').click(function(){
+      $('#magazine_fields_value').show();
+  });
+
+
+  $('#cancel_btn').click(function(){
+      $('#magazine_fields_value').hide();
+  });
+
+</script>
+
+
