@@ -25,7 +25,7 @@ class MagazinesController < ApplicationController
   # GET /magazines/new.json
   def new
     @magazine = Magazine.new
-    @magazine.people.build
+    1.times { @magazine.people.build}
     respond_to do |format|
       format.html # _new.html.erb
       format.json { render json: @magazine }
